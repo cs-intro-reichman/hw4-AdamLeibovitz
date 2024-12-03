@@ -24,8 +24,11 @@ public class MyString {
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
         boolean valid = false;
+        if (str2 == "") {
+            return true;
+        }
         for (int j = 0; j < str1.length(); j++) {
-            if (str1.charAt(j) == str2.charAt(0) && j+str2.length() <= str1.length()) {
+            if (str1.charAt(j) == str2.charAt(0) && (j + str2.length()) <= str1.length()) {
                 valid = true;
                 for (int i = 0; i < str2.length(); i++) {
                     if (str2.charAt(i) != str1.charAt(j+i)) {

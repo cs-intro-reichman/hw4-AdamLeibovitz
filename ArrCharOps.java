@@ -164,7 +164,7 @@ public class ArrCharOps {
      *         return -2 if there is an error with the input.
      */
     public static int compareTo(String str1, String str2) {
-        if (str1 == null || str2 == null) {
+        if (str1 == null || str2 == null || str1 == "" || str2 == "") {
             return -2;
         }
         int len = Math.min(str1.length(),str2.length());
